@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vice Legend — GTA VI Trophy Guide &amp; Tracker</title>
+<meta name="description" content="The complete offline guide and tracker for all 55 PlayStation 5 trophies of Grand Theft Auto VI: cited guides, a roadmap to the platinum, missable flags and saved progress.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="masthead">
+  <div class="masthead-copy">
+    <p class="kicker">Grand Theft Auto VI &middot; PlayStation 5 &middot; 55 trophies &middot; 0 online</p>
+    <h1>VICE LEGEND</h1>
+    <p class="sub">Every trophy, its official description and grade, a guide in our own words with its sources named, and a roadmap to the platinum. Works fully offline — your progress never leaves this browser.</p>
+  </div>
+  <div class="platinum-card" id="platinumCard" aria-live="polite">
+    <p class="platinum-label">Road to the Platinum</p>
+    <p class="platinum-name">Vice Got a Price!</p>
+    <p class="platinum-count" id="progressText">0 / 55 earned</p>
+    <div class="bar" role="progressbar" aria-label="Progress to platinum" aria-valuemin="0" aria-valuemax="55" aria-valuenow="0" id="progressBar"><span id="progressFill"></span></div>
+    <p class="platinum-pct" id="progressPct">0% to platinum</p>
+    <p class="grade-counts" id="gradeCounts"></p>
+  </div>
+</header>
+
+<nav class="tabs" aria-label="Guide sections">
+  <button type="button" class="tab active" data-tab="tracker" aria-selected="true">Tracker</button>
+  <button type="button" class="tab" data-tab="roadmap" aria-selected="false">Roadmap to Platinum</button>
+  <button type="button" class="tab" data-tab="sources" aria-selected="false">Sources &amp; method</button>
+</nav>
+
+<main>
+  <section id="tab-tracker" class="panel" aria-label="Trophy tracker">
+    <div class="controls">
+      <label class="search">Search
+        <input id="search" type="search" placeholder="Name, description or guide…" autocomplete="off">
+      </label>
+      <label>Grade
+        <select id="gradeFilter">
+          <option value="all">All grades</option>
+          <option value="platinum">Platinum</option>
+          <option value="gold">Gold</option>
+          <option value="silver">Silver</option>
+          <option value="bronze">Bronze</option>
+        </select>
+      </label>
+      <label>Show
+        <select id="earnedFilter">
+          <option value="all">All trophies</option>
+          <option value="earned">Earned only</option>
+          <option value="remaining">Not earned yet</option>
+        </select>
+      </label>
+      <label class="check"><input id="spoilerToggle" type="checkbox" checked> Hide story spoilers</label>
+      <div class="file-actions">
+        <button id="exportBtn" type="button">Export progress</button>
+        <label class="import-btn">Import progress <input id="importFile" type="file" accept="application/json,.json"></label>
+        <button id="resetBtn" type="button" class="danger">Reset</button>
+      </div>
+    </div>
+    <div class="chips" id="kindChips" role="group" aria-label="Filter by kind"></div>
+    <p class="result-line" id="resultLine"></p>
+    <div class="tracker-grid">
+      <div class="list-wrap">
+        <ol class="trophy-list" id="trophyList"></ol>
+        <p class="empty" id="emptyState" hidden></p>
+      </div>
+      <aside class="detail" id="detailPanel" aria-live="polite"></aside>
+    </div>
+  </section>
+
+  <section id="tab-roadmap" class="panel" aria-label="Roadmap to the platinum" hidden>
+    <div id="roadmapBody"></div>
+  </section>
+
+  <section id="tab-sources" class="panel" aria-label="Sources and method" hidden>
+    <div id="sourcesBody"></div>
+  </section>
+</main>
+
+<footer>
+  <p>Unofficial fan guide. Not affiliated with Rockstar Games, Sony or PlayStation. No Rockstar logo, artwork or game screenshots are used anywhere in this guide. Trophy names and descriptions are PlayStation's own; every guide is written for this page and names its sources.</p>
+</footer>
+<script type="module" src="app.js"></script>
+</body>
+</html>
